@@ -1,14 +1,117 @@
 @import "tailwindcss";
 
-@layer base {
-  html {
-    background-color: #ffffff;
-    color: #0f172a;
-    scroll-behavior: smooth;
-  }
-  body {
-    background-color: #ffffff;
-    color: #0f172a;
-    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
-  }
+/* ==========================================================================
+   Monish J B Portfolio — Solid White Theme & Clean Engineering System
+   ========================================================================== */
+
+:root {
+  --bg-main: #ffffff;
+  --bg-surface: #ffffff;
+  --border-subtle: #e5e7eb;
+  --border-medium: #d1d5db;
+  --border-dark: #171717;
+
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Base Layout Containers */
+main {
+  background-color: #ffffff !important;
+}
+
+/* Explicit Card & Box Styling */
+.card-box {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-box:hover {
+  border-color: #a3a3a3 !important;
+}
+
+/* Buttons */
+.btn-dark {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border: 1px solid #0f172a !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: background-color 0.2s ease;
+}
+
+.btn-dark:hover {
+  background-color: #1e293b !important;
+}
+
+.btn-outline {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #d1d5db !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: background-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #f8fafc !important;
+  border-color: #0f172a !important;
+}
+
+/* Badges & Tags */
+.tag-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  color: #1e293b !important;
+  font-size: 0.78rem !important;
+  font-family: var(--font-mono), monospace !important;
+  font-weight: 500 !important;
 }
