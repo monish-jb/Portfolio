@@ -1,49 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monish J B | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monish J B | Computer Science Engineer & AI Developer</title>
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="Personal Developer Portfolio of Monish J B — Computer Science Engineering student specializing in Data Structures & Algorithms, AI/ML pipelines, Agentic AI, and Computer Vision systems.">
+  <meta name="keywords" content="Monish J B, Computer Science, Software Engineer, AI Developer, Agentic AI, Computer Vision, YOLOv8, Mistral LLM, LeetCode, Data Structures Algorithms">
+  <meta property="og:title" content="Monish J B | Computer Science Engineer & AI Developer">
+  <meta property="og:description" content="Building intelligent systems with code, data & AI. View projects in Agentic AI, Computer Vision, and DSA.">
+  <meta property="og:type" content="website">
+
+  <!-- Typography & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+
+  <!-- Modern Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Monish J B</h1>
-        <p>Programmer | Computer Science Student</p>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate programmer with strong interest in problem solving,
-            data structures, algorithms, and system-level programming.
-            I enjoy working with C, Python, and exploring how software interacts with hardware.
-        </p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>C Programming</li>
-            <li>Python</li>
-            <li>Data Structures & Algorithms</li>
-            <li>HTML & CSS</li>
-        </ul>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <p>
-            Bachelor of Engineering – Computer Science <br>
-            (Currently Pursuing)
-        </p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email <a href="mailto:monish12122006jb@gmail.com">monish12122006jb@gmail.com</a></p>
-        <p>GitHub: <a href="https://www.github.com/monish-jb">Monish's GitHub Acc</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/monish-j-b-b77010352/">Monish's LinkedIn Acc</a></p>
-    </section>
-    <footer>
-        <p>© 2025 Monish J B. All rights reserved.</p>
-    </footer>
 
+  <!-- =========================================================================
+       SITE HEADER & STICKY NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#home" class="logo">
+        <div class="logo-badge">M</div>
+        <span class="logo-text">Monish J B</span>
+        <span class="logo-tag">CSE</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#dsa" class="nav-link">DSA</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+          <i id="theme-icon" data-lucide="sun"></i>
+        </button>
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle Mobile Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         HERO SECTION WITH INTERACTIVE NEURAL CANVAS
+         ========================================================================= -->
+    <section id="home" class="hero-section">
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+      
+      <div class="container hero-content">
+        <div class="hero-badge-wrapper">
+          <span class="hero-badge">
+            <i data-lucide="sparkles"></i> Bannari Amman Institute of Technology — B.E. CSE
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          Building Intelligent Systems <br>
+          with <span class="gradient-text">Code, Data & AI.</span>
+        </h1>
+
+        <p class="hero-description">
+          Computer Science Engineering student with hands-on experience developing real-time 
+          <strong>Computer Vision pipelines</strong>, <strong>Agentic AI workflows</strong>, and optimized 
+          <strong>Data Structures & Algorithms</strong> solutions.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="layers"></i> Explore Projects
+          </a>
+          <a href="https://leetcode.com/u/Monish_jb" target="_blank" rel="noopener" class="btn btn-leetcode">
+            <i data-lucide="code-2"></i> LeetCode Profile
+          </a>
+          <a href="https://github.com/monish-jb" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i data-lucide="github"></i> GitHub
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i data-lucide="mail"></i> Contact Me
+          </a>
+        </div>
+
+        <!-- Real Stats Cards -->
+        <div class="hero-stats-grid" id="hero-stats-grid">
+          <!-- Dynamically Rendered by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         ABOUT SECTION
+         ========================================================================= -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Engineering Core Software & AI Systems</h2>
+          <p class="section-subtitle">Bridging theoretical computer science with practical deep learning applications.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3><i data-lucide="user-check" style="color: var(--accent-blue);"></i> Engineering Background</h3>
+            <p id="about-bio-left">
+              <!-- Dynamically Populated -->
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3><i data-lucide="cpu" style="color: var(--accent-purple);"></i> Algorithmic Focus</h3>
+            <p id="about-bio-right">
+              <!-- Dynamically Populated -->
+            </p>
+
+            <div class="exploring-box">
+              <div class="exploring-title">Currently Exploring:</div>
+              <div class="explore-pills" id="about-exploring-tags">
+                <!-- Dynamically Populated -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SKILLS ECOSYSTEM
+         ========================================================================= -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Skills & Knowledge</span>
+          <h2 class="section-title">Technical Expertise</h2>
+          <p class="section-subtitle">Structured proficiencies in programming, AI/ML, computer vision, and core CS fundamentals.</p>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+          <!-- Dynamically Rendered -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PROJECTS SECTION (SAAS CASE STUDY & FILTERABLE GRID)
+         ========================================================================= -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Case Studies & AI Projects</h2>
+          <p class="section-subtitle">Real-world AI systems built with multi-agent orchestration and computer vision pipelines.</p>
+        </div>
+
+        <!-- Featured SaaS Case Study Container -->
+        <div id="featured-project-container">
+          <!-- Dynamically Rendered -->
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="agentic_ai">Agentic AI</button>
+          <button class="filter-btn" data-filter="computer_vision">Computer Vision</button>
+        </div>
+
+        <!-- Secondary Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Dynamically Rendered -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         DSA / COMPETITIVE CODING SECTION
+         ========================================================================= -->
+    <section id="dsa" class="dsa-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Algorithms & DSA</span>
+          <h2 class="section-title">Data Structures & Problem Solving</h2>
+          <p class="section-subtitle">Dedicated to mastering time/space complexity and algorithm implementations.</p>
+        </div>
+
+        <div id="dsa-container">
+          <!-- Dynamically Rendered -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         EDUCATION & TIMELINE SECTION
+         ========================================================================= -->
+    <section id="education" class="education-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Background</span>
+          <h2 class="section-title">Education & Milestones</h2>
+          <p class="section-subtitle">Academic record and ongoing Computer Science degree pursuing.</p>
+        </div>
+
+        <div class="timeline" id="education-timeline">
+          <!-- Dynamically Rendered -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CONTACT & RESUME CTA SECTION
+         ========================================================================= -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="contact-title">Let's Build Something Meaningful</h2>
+          <p class="contact-subtitle">
+            Open to software engineering internships, AI/ML roles, and collaborative projects. 
+            Feel free to reach out directly via email or social profiles.
+          </p>
+
+          <div class="contact-buttons">
+            <a href="mailto:monish12122006jb@gmail.com" class="btn btn-primary">
+              <i data-lucide="mail"></i> Email Me Directly
+            </a>
+            <button class="btn btn-secondary" data-copy="monish12122006jb@gmail.com">
+              <i data-lucide="copy"></i> Copy Email
+            </button>
+            <button class="btn btn-secondary" data-copy="+91 9629606364">
+              <i data-lucide="phone"></i> Copy Phone
+            </button>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/monish-jb" target="_blank" rel="noopener" class="social-btn" title="GitHub">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="https://linkedin.com/in/monish-j-b-b77010352/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://leetcode.com/u/Monish_jb" target="_blank" rel="noopener" class="social-btn" title="LeetCode">
+              <i data-lucide="code-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Monish J B. Built with vanilla HTML5, CSS3 & JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
