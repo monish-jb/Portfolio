@@ -17,10 +17,10 @@ export default function HomePage() {
   };
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-20">
+    <main className="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-20 bg-white">
       {/* Hero Header Section */}
       <section className="space-y-6 max-w-3xl">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-100 border border-neutral-200 text-xs font-mono font-medium text-neutral-700">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white border border-neutral-300 text-xs font-mono font-medium text-neutral-800 shadow-2xs">
           <span>Bannari Amman Institute of Technology — B.E. CSE</span>
         </div>
 
@@ -35,7 +35,7 @@ export default function HomePage() {
         <div className="pt-2 flex flex-wrap items-center gap-4">
           <Link
             href={hero.primaryCta.href}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-sm transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-sm transition-colors shadow-xs"
           >
             <span>{hero.primaryCta.text}</span>
             <ArrowRight className="w-4 h-4" />
@@ -52,7 +52,7 @@ export default function HomePage() {
       {/* Core Technical Domains */}
       <section className="space-y-6 border-t border-neutral-200 pt-16">
         <div className="flex items-center justify-between">
-          <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-400">
+          <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
             Core Focus Areas
           </h2>
         </div>
@@ -61,9 +61,9 @@ export default function HomePage() {
           {hero.coreCapabilities.map((cap, idx) => (
             <div
               key={cap.title}
-              className="bg-white border border-neutral-200 rounded-xl p-6 space-y-4 hover:border-neutral-400 transition-colors"
+              className="bg-white border border-neutral-200 rounded-xl p-6 space-y-4 hover:border-neutral-400 transition-colors shadow-2xs"
             >
-              <div className="w-10 h-10 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-white border border-neutral-300 flex items-center justify-center shadow-2xs">
                 {getCapabilityIcon(idx)}
               </div>
               <h3 className="font-bold text-neutral-900 text-lg">{cap.title}</h3>
@@ -72,7 +72,7 @@ export default function HomePage() {
                 {cap.tech.map((t) => (
                   <span
                     key={t}
-                    className="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-100 border border-neutral-200 text-neutral-600"
+                    className="text-[11px] font-mono px-2 py-0.5 rounded bg-white border border-neutral-300 text-neutral-700 font-medium"
                   >
                     {t}
                   </span>
@@ -87,7 +87,7 @@ export default function HomePage() {
       <section className="space-y-6 border-t border-neutral-200 pt-16">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-400">
+            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
               Featured Work
             </h2>
             <h3 className="text-2xl font-bold text-neutral-900 mt-1">
@@ -107,10 +107,10 @@ export default function HomePage() {
           {selectedWork.map((project) => (
             <div
               key={project.id}
-              className="bg-white border border-neutral-200 rounded-xl p-6 sm:p-8 space-y-4 hover:border-neutral-400 transition-colors"
+              className="bg-white border border-neutral-200 rounded-xl p-6 sm:p-8 space-y-4 hover:border-neutral-400 transition-colors shadow-2xs"
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <span className="text-xs font-semibold px-2.5 py-1 rounded bg-neutral-100 border border-neutral-200 text-neutral-700">
+                <span className="text-xs font-semibold px-2.5 py-1 rounded bg-white border border-neutral-300 text-neutral-800">
                   {project.category}
                 </span>
                 <span className="text-xs font-mono text-neutral-400">
@@ -119,10 +119,10 @@ export default function HomePage() {
               </div>
 
               <h4 className="text-xl font-bold text-neutral-900">{project.title}</h4>
-              <p className="text-neutral-700 font-medium text-base leading-relaxed">
+              <p className="text-neutral-800 font-medium text-base leading-relaxed">
                 {project.outcome}
               </p>
-              <p className="text-neutral-500 text-sm leading-relaxed">
+              <p className="text-neutral-600 text-sm leading-relaxed">
                 {project.description}
               </p>
 
@@ -130,7 +130,7 @@ export default function HomePage() {
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs font-mono px-2.5 py-1 rounded bg-neutral-50 border border-neutral-200 text-neutral-600"
+                    className="text-xs font-mono px-2.5 py-1 rounded bg-white border border-neutral-300 text-neutral-700 font-medium"
                   >
                     {tech}
                   </span>

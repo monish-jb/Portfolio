@@ -22,7 +22,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-16">
+    <main className="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-16 bg-white">
       {/* Header */}
       <div className="space-y-4 max-w-2xl border-b border-neutral-200 pb-10">
         <h1 className="text-4xl font-extrabold text-neutral-900 tracking-tight">
@@ -34,7 +34,7 @@ export default function ContactPage() {
       </div>
 
       {/* Primary Channels Card */}
-      <div className="bg-white border border-neutral-200 rounded-xl p-8 space-y-8 max-w-2xl">
+      <div className="bg-white border border-neutral-200 rounded-xl p-8 space-y-8 max-w-2xl shadow-2xs">
         <div className="space-y-4">
           <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-400">
             Direct Channels
@@ -43,7 +43,7 @@ export default function ContactPage() {
           <div className="flex flex-wrap items-center gap-3">
             <a
               href={`mailto:${contact.email}`}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-sm transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-sm transition-colors shadow-xs"
             >
               <Mail className="w-4 h-4" />
               <span>Email Monish</span>
@@ -78,7 +78,7 @@ export default function ContactPage() {
               href={contact.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 rounded-lg bg-neutral-50 border border-neutral-200 hover:border-neutral-400 transition-colors group"
+              className="flex items-center justify-between p-4 rounded-lg bg-white border border-neutral-200 hover:border-neutral-400 transition-colors group shadow-2xs"
             >
               <div className="flex items-center gap-2.5">
                 <GithubIcon className="w-4 h-4 text-neutral-700" />
@@ -91,7 +91,7 @@ export default function ContactPage() {
               href={contact.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 rounded-lg bg-neutral-50 border border-neutral-200 hover:border-neutral-400 transition-colors group"
+              className="flex items-center justify-between p-4 rounded-lg bg-white border border-neutral-200 hover:border-neutral-400 transition-colors group shadow-2xs"
             >
               <div className="flex items-center gap-2.5">
                 <LinkedinIcon className="w-4 h-4 text-neutral-700" />
@@ -104,7 +104,7 @@ export default function ContactPage() {
               href={contact.leetcodeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 rounded-lg bg-neutral-50 border border-neutral-200 hover:border-neutral-400 transition-colors group"
+              className="flex items-center justify-between p-4 rounded-lg bg-white border border-neutral-200 hover:border-neutral-400 transition-colors group shadow-2xs"
             >
               <div className="flex items-center gap-2.5">
                 <span className="font-mono text-xs font-bold text-amber-600">LC</span>

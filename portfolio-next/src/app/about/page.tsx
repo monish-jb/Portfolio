@@ -5,7 +5,7 @@ export default function AboutPage() {
   const { about } = PORTFOLIO_CONTENT;
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-16">
+    <main className="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-16 bg-white">
       {/* Header */}
       <div className="space-y-4 max-w-2xl border-b border-neutral-200 pb-10">
         <h1 className="text-4xl font-extrabold text-neutral-900 tracking-tight">
@@ -32,7 +32,7 @@ export default function AboutPage() {
       {/* Structured Education Section */}
       <section className="space-y-8 border-t border-neutral-200 pt-16">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-neutral-100 border border-neutral-200 text-xs font-mono text-neutral-700">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-neutral-300 text-xs font-mono text-neutral-800 shadow-2xs">
             <GraduationCap className="w-4 h-4 text-neutral-900" />
             <span>Academic Background</span>
           </div>
@@ -52,7 +52,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-neutral-900">{item.degree}</h3>
                   <p className="text-sm font-medium text-neutral-600 mt-0.5">{item.institution}</p>
                 </div>
-                <span className="text-xs font-mono px-3 py-1 rounded bg-neutral-100 border border-neutral-200 text-neutral-700 font-semibold">
+                <span className="text-xs font-mono px-3 py-1 rounded bg-white border border-neutral-300 text-neutral-800 font-semibold">
                   {item.period}
                 </span>
               </div>

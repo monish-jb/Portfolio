@@ -2,11 +2,13 @@
 
 @layer base {
   html {
+    background-color: #ffffff;
+    color: #0f172a;
     scroll-behavior: smooth;
   }
   body {
     background-color: #ffffff;
-    color: #171717;
+    color: #0f172a;
     font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   }
 }

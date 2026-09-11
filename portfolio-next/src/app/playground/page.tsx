@@ -1,12 +1,11 @@
 import { ArrowUpRight } from "lucide-react";
-import { GithubIcon } from "../../components/SocialIcons";
 import { PORTFOLIO_CONTENT } from "../../data/portfolioContent";
 
 export default function PlaygroundPage() {
   const { playground } = PORTFOLIO_CONTENT;
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-12">
+    <main className="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-12 bg-white">
       {/* Header */}
       <div className="space-y-4 max-w-2xl border-b border-neutral-200 pb-10">
         <h1 className="text-4xl font-extrabold text-neutral-900 tracking-tight">
@@ -22,7 +21,7 @@ export default function PlaygroundPage() {
         {playground.map((item) => (
           <div
             key={item.id}
-            className="bg-white border border-neutral-200 rounded-xl p-6 flex flex-col justify-between space-y-6 hover:border-neutral-400 transition-colors"
+            className="bg-white border border-neutral-200 rounded-xl p-6 flex flex-col justify-between space-y-6 hover:border-neutral-400 transition-colors shadow-2xs"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
@@ -52,7 +51,7 @@ export default function PlaygroundPage() {
               {item.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-100 border border-neutral-200 text-neutral-600"
+                  className="text-[11px] font-mono px-2 py-0.5 rounded bg-white border border-neutral-300 text-neutral-700 font-medium"
                 >
                   {t}
                 </span>
