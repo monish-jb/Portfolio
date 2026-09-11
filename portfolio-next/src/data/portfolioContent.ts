@@ -25,6 +25,12 @@ export interface EducationItem {
 }
 
 export const PORTFOLIO_CONTENT = {
+  personal: {
+    name: "Monish J B",
+    role: "Computer Science Engineer | AI Developer",
+    location: "India"
+  },
+
   hero: {
     greeting: "Monish J B",
     tagline: "Computer Science Engineer | AI Developer & Problem Solver",
